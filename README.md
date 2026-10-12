@@ -1,25 +1,25 @@
-# Waterways Intelligence Dashboard
+# Waterways Intelligence Studio
 
-Interactive Streamlit dashboard for exploring waterways CSV data.
+A river-inspired Streamlit dashboard for exploring waterways CSV attributes.
 
-## Features
-- KPI cards and dataset overview
-- Interactive feature-class pie and bar charts
-- Feature-class/code cross-tabulation
-- Data quality and missing-value analysis
-- Searchable data explorer and CSV downloads
-- Upload CSV from the sidebar
+## Included
+- River/glacier visual theme with high-contrast readable text
+- KPI overview and feature-class charts
+- Named/unnamed coverage and top-name analysis
+- Data quality audit and identifier checks
+- Searchable records and CSV downloads
+- CSV upload from the sidebar
 
-## Run locally
+## Run
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
 ## Deploy
-Deploy this repository using Streamlit Community Cloud. Set the main file path to `app.py`.
+Deploy on Streamlit Community Cloud with branch `main` and main file path `app.py`.
 
-If `Waterways.csv` is not included in the repository, upload it through the dashboard sidebar. Do not publish datasets unless you have permission to share them.
+Upload `Waterways.csv` in the app sidebar unless you have permission to publish it in the repository.
 
-## Data limitations
-Without coordinates or GIS geometry, this dashboard analyses attributes only. It does not calculate waterway length, area, flood risk, or ecological condition.
+## Limitations
+This is attribute-based analytics. Spatial analysis requires valid coordinates or GIS geometry. Feature counts are not measurements of river length, flow, flood risk or ecological condition.
