@@ -1,20 +1,12 @@
-# Python
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
-
-# Local data and generated outputs
+.venv/
+venv/
+.env
+.DS_Store
 Waterways.csv
 *.gpkg
 *.shp
 *.shx
 *.dbf
 *.prj
-*.cpg
-waterways_analytics/
-*.xlsx
-
-# Environment files
-.env
-.venv/
-venv/

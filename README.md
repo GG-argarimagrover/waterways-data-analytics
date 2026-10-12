@@ -1,52 +1,25 @@
-# Waterways Data Analytics 🌊
+# Waterways Intelligence Dashboard
 
-An interactive Google Colab notebook for exploratory data analysis and visualisation of waterways attribute data.
+Interactive Streamlit dashboard for exploring waterways CSV data.
 
 ## Features
+- KPI cards and dataset overview
+- Interactive feature-class pie and bar charts
+- Feature-class/code cross-tabulation
+- Data quality and missing-value analysis
+- Searchable data explorer and CSV downloads
+- Upload CSV from the sidebar
 
-- Data quality audit: missing values, data types, unique values and duplicate rows
-- Descriptive statistics and categorical frequency distributions
-- Interactive Plotly bar charts and pie charts
-- Feature class versus code cross-tabulation
-- Numeric distributions, outlier checks and correlation heatmap when applicable
-- Named versus unnamed feature analysis
-- Spatial-data readiness check and coordinate map when valid coordinates exist
-- Export of cleaned CSV, KPI summaries and an Excel report
+## Run locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-## Quick start
+## Deploy
+Deploy this repository using Streamlit Community Cloud. Set the main file path to `app.py`.
 
-1. Open the notebook: [`Waterways_Data_Analytics.ipynb`](Waterways_Data_Analytics.ipynb).
-2. Click **Open in Colab** or upload the notebook to Google Colab.
-3. Run all cells.
-4. Upload `Waterways.csv` when prompted.
-5. Review the charts and download the generated Excel report.
+If `Waterways.csv` is not included in the repository, upload it through the dashboard sidebar. Do not publish datasets unless you have permission to share them.
 
-[Open Google Colab](https://colab.research.google.com/)
-
-## Dataset
-
-Place `Waterways.csv` in the Colab session when prompted. The repository intentionally does not include the raw dataset by default.
-
-Expected fields in the current example may include `fid`, `osm_id`, `code`, `fclass`, and `name`. The notebook detects columns dynamically where practical.
-
-## Spatial limitations
-
-Attribute-only CSV data does not provide enough information for a geographic map, feature length/area calculation, proximity analysis, or flood-risk assessment. For those workflows, use verified coordinates or spatial geometry (GeoJSON, Shapefile components, or GeoPackage) and appropriate supporting datasets.
-
-## Outputs
-
-The notebook writes analysis outputs to `/content/waterways_analytics/` in Google Colab:
-
-- `waterways_cleaned.csv`
-- `data_quality_audit.csv`
-- `waterways_kpis.csv`
-- `feature_class_summary.csv` (if `fclass` exists)
-- `waterways_analytics_report.xlsx`
-
-## Technologies
-
-Python, pandas, NumPy, Plotly, and openpyxl.
-
-## License
-
-MIT License. See [`LICENSE`](LICENSE).
+## Data limitations
+Without coordinates or GIS geometry, this dashboard analyses attributes only. It does not calculate waterway length, area, flood risk, or ecological condition.
